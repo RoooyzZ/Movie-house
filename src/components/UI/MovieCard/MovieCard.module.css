@@ -13,6 +13,48 @@
   transition: all 0.3s ease;
 }
 
+.favoriteButton {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid #ffffff40;
+  border-radius: 50%;
+  background: #141025d9;
+  color: white;
+}
+
+.heart {
+  width: 23px;
+  height: 21px;
+  background: currentColor;
+  mask: url("/images/favourites.svg") center / contain no-repeat;
+}
+
+.favoriteButton:hover {
+  background: #33243f;
+}
+
+.favoriteButton[aria-pressed="true"] {
+  color: #ff7893;
+  border-color: #ff7893;
+  background: #401c30;
+}
+
+.favoriteButton:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+.favoriteButton:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
 .card:hover .imgCatalog {
   box-shadow:
     0 20px 40px rgba(0, 0, 0, 0.6),

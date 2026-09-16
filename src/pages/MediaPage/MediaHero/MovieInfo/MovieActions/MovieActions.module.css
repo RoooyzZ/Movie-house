@@ -7,3 +7,8 @@
   background-color: red;
   border: none;
 }
+
+.favoriteActive {
+  outline: 2px solid #ff4d6d;
+  outline-offset: 2px;
+}

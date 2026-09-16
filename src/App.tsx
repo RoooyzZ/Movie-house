@@ -9,6 +9,7 @@ import { lazy, Suspense } from "react";
 const queryClient = new QueryClient();
 const HomePage = lazy(() => import("@/pages/HomePage/HomePage"));
 const MediaPage = lazy(() => import("@/pages/MediaPage/MediaPage"));
+const FavoritesPage = lazy(() => import("@/pages/FavoritesPage/FavoritesPage"));
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Routes>
               <Route path={ROUTES.HOME} element={<HomePage />} />
               <Route path={ROUTES.MEDIA_PAGE} element={<MediaPage />} />
+              <Route path={ROUTES.FAVORITES} element={<FavoritesPage />} />
             </Routes>
           </Suspense>
         </main>

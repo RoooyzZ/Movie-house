@@ -9,7 +9,7 @@ function MovieInfo({ data }: MovieInfoProps) {
     <div className={styles.containerInfo}>
       <h1 className={styles.titleMain}>{isMovie(data) ? data.original_title : data.name}</h1>
       <MovieMeta data={data} />
-      <MovieActions />
+      <MovieActions data={data} />
     </div>
   );
 }

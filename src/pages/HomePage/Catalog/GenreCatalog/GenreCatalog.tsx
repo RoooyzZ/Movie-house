@@ -38,6 +38,7 @@ function GenreSection({ title, items, getGenreNames }: GenreSectionProps) {
               onClick={() => item.id && item.type && navigate(ROUTES.mediaPage(item.type, item.id))}
             >
               <MovieCard
+                id={item.id}
                 title={item.title || item.name || ""}
                 image={item.backdrop_path || ""}
                 rating={item.vote_average || 0}
